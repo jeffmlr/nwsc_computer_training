@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NWSC Computer Rep — Documents</title>
 <style>
+  * {
+    box-sizing: border-box;
+  }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     max-width: 720px;
@@ -12,15 +15,20 @@
     padding: 32px 24px 64px;
     color: #1a1a1a;
     line-height: 1.5;
+    background: #ffffff;
+  }
+  header {
+    margin-bottom: 32px;
   }
   h1 {
     color: #1F3864;
     margin: 0 0 8px;
     font-size: 28px;
+    font-weight: 700;
   }
   .subtitle {
     color: #595959;
-    margin: 0 0 32px;
+    margin: 0;
     font-size: 15px;
   }
   .card {
@@ -28,90 +36,85 @@
     border-radius: 8px;
     padding: 20px 24px;
     margin-bottom: 16px;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .card:hover {
-    border-color: #2E75B6;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    background: #ffffff;
   }
   .card h2 {
     color: #2E75B6;
-    margin: 0 0 4px;
+    margin: 0 0 6px;
     font-size: 18px;
+    font-weight: 600;
   }
-  .card p {
-    margin: 0 0 12px;
+  .card-description {
+    margin: 0 0 16px;
     color: #595959;
     font-size: 14px;
   }
-  .links {
+  .card-actions {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     flex-wrap: wrap;
   }
-  .links a {
+  .card-actions a {
     background: #f6f8fa;
     border: 1px solid #d0d7de;
     border-radius: 6px;
-    padding: 4px 12px;
+    padding: 6px 14px;
     text-decoration: none;
     color: #2E75B6;
     font-size: 13px;
     font-weight: 500;
+    transition: background 0.15s, border-color 0.15s;
   }
-  .links a:hover {
+  .card-actions a:hover {
     background: #eaeef2;
+    border-color: #2E75B6;
   }
-  .footer {
-    margin-top: 32px;
+  footer {
+    margin-top: 40px;
     padding-top: 16px;
     border-top: 1px solid #d0d7de;
     font-size: 13px;
     color: #595959;
   }
-  .footer a {
-    color: #2E75B6;
-  }
 </style>
 </head>
 <body>
 
-<h1>NWSC Computer Rep — Documents</h1>
-<p class="subtitle">Training materials and quick references for NWSC Computer Representatives.</p>
+<header>
+  <h1>NWSC Computer Rep — Documents</h1>
+  <p class="subtitle">Training materials and quick references for NWSC Computer Representatives.</p>
+</header>
 
-<a class="card" href="NWSC_Computer_Rep_Training.pdf">
+<div class="card">
   <h2>📘 Full Training Guide</h2>
-  <p>Comprehensive Computer Rep training — workflow week-by-week, Phase 1 through 5, Dolphin appendix, tri-meet appendix, troubleshooting.</p>
-  <div class="links">
-    <a href="NWSC_Computer_Rep_Training.pdf" onclick="event.stopPropagation()">PDF</a>
-    <a href="NWSC_Computer_Rep_Training.docx" onclick="event.stopPropagation()">Word</a>
+  <p class="card-description">Comprehensive Computer Rep training — workflow week-by-week, Phase 1 through 5, Dolphin appendix, tri-meet appendix, troubleshooting.</p>
+  <div class="card-actions">
+    <a href="NWSC_Computer_Rep_Training.pdf">PDF</a>
+    <a href="NWSC_Computer_Rep_Training.docx">Word</a>
   </div>
-</a>
-
-<a class="card" href="Weekly_Quick_Reference.pdf">
-  <h2>📋 Weekly Quick Reference</h2>
-  <p>Print-and-laminate one-pager. Day-by-day checklist plus deadlines tables and troubleshooting.</p>
-  <div class="links">
-    <a href="Weekly_Quick_Reference.pdf" onclick="event.stopPropagation()">PDF</a>
-    <a href="Weekly_Quick_Reference.docx" onclick="event.stopPropagation()">Word</a>
-  </div>
-</a>
-
-<a class="card" href="Sample_Artifacts.pdf">
-  <h2>📁 Sample Artifacts</h2>
-  <p>Concrete templates: Meet Notes, combined heats reference, absence tracking sheet, file naming convention, distribution lists.</p>
-  <div class="links">
-    <a href="Sample_Artifacts.pdf" onclick="event.stopPropagation()">PDF</a>
-    <a href="Sample_Artifacts.docx" onclick="event.stopPropagation()">Word</a>
-  </div>
-</a>
-
-<div class="footer">
-  Per NWSC MOM 2025+ ruleset. Adapt freely for your team.
 </div>
+
+<div class="card">
+  <h2>📋 Weekly Quick Reference</h2>
+  <p class="card-description">Print-and-laminate one-pager. Day-by-day checklist plus deadlines tables and troubleshooting.</p>
+  <div class="card-actions">
+    <a href="Weekly_Quick_Reference.pdf">PDF</a>
+    <a href="Weekly_Quick_Reference.docx">Word</a>
+  </div>
+</div>
+
+<div class="card">
+  <h2>📁 Sample Artifacts</h2>
+  <p class="card-description">Concrete templates: Meet Notes, combined heats reference, absence tracking sheet, file naming convention, distribution lists.</p>
+  <div class="card-actions">
+    <a href="Sample_Artifacts.pdf">PDF</a>
+    <a href="Sample_Artifacts.docx">Word</a>
+  </div>
+</div>
+
+<footer>
+  Per NWSC MOM 2025+ ruleset. Adapt freely for your team.
+</footer>
 
 </body>
 </html>
