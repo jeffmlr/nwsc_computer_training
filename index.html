@@ -8,6 +8,9 @@
   * {
     box-sizing: border-box;
   }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     max-width: 720px;
@@ -51,19 +54,30 @@
   }
   .card-actions {
     display: flex;
-    gap: 8px;
     flex-wrap: wrap;
+    align-items: center;
   }
   .card-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: #f6f8fa;
     border: 1px solid #d0d7de;
     border-radius: 6px;
     padding: 6px 14px;
+    margin: 0 8px 8px 0;
+    line-height: 1.1;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    appearance: none;
     text-decoration: none;
     color: #2E75B6;
     font-size: 13px;
     font-weight: 500;
     transition: background 0.15s, border-color 0.15s;
+  }
+  .card-actions a:empty {
+    display: none;
   }
   .card-actions a:hover {
     background: #eaeef2;
